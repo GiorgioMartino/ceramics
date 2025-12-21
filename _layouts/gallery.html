@@ -1,0 +1,82 @@
+---
+layout: default
+---
+<header class="page-header">
+  <h1>{{ page.title }}</h1>
+  {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
+</header>
+
+{% assign pieces_sorted = site.pieces | sort: "year" | reverse %}
+
+{% assign all_cats = "" | split: "" %}
+{% for p in pieces_sorted %}
+  {% if p.categories %}
+    {% for c in p.categories %}
+      {% assign all_cats = all_cats | push: c %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% assign all_cats = all_cats | uniq | sort %}
+
+{% if all_cats and all_cats.size > 0 %}
+  <section class="filters" aria-label="Category filters">
+    <button class="filter-btn is-active" data-filter="all" type="button">All</button>
+    {% for c in all_cats %}
+      <button class="filter-btn" data-filter="{{ c | downcase }}" type="button">{{ c }}</button>
+    {% endfor %}
+  </section>
+{% endif %}
+
+<section class="grid" id="piecesGrid">
+  {% for piece in pieces_sorted %}
+    {% assign status = piece.status | downcase %}
+
+    {% assign cat_list = "" %}
+    {% if piece.categories %}
+      {% for c in piece.categories %}
+        {% assign cat_list = cat_list | append: c | downcase | append: "|" %}
+      {% endfor %}
+    {% endif %}
+
+    <article class="card" data-categories="{{ cat_list }}">
+      <a class="card-link" href="{{ piece.url | relative_url }}">
+        <div class="thumb">
+          {% if piece.images and piece.images.size > 0 %}
+            <img
+              src="{{ piece.images[0] | relative_url }}"
+              alt="{{ piece.title }}"
+              loading="lazy"
+            />
+          {% else %}
+            <div class="thumb-placeholder">No image yet</div>
+          {% endif %}
+
+          {% if status == "available" %}
+            <span class="badge badge-available">Available</span>
+          {% else %}
+            <span class="badge badge-unavailable">Not available</span>
+          {% endif %}
+        </div>
+
+        <div class="meta">
+          <h2 class="title">{{ piece.title }}</h2>
+
+          <div class="sub">
+            {% if piece.year %}<span>{{ piece.year }}</span>{% endif %}
+            {% if piece.materials %}<span class="dot">•</span><span>{{ piece.materials }}</span>{% endif %}
+          </div>
+
+          {% assign show_cats_site = site.show.categories %}
+          {% assign show_cats_piece = piece.show.categories %}
+          {% if show_cats_site and show_cats_piece != false and piece.categories %}
+            <div class="chips">
+              {% for c in piece.categories %}
+                <span class="chip">{{ c }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </a>
+    </article>
+  {% endfor %}
+</section>

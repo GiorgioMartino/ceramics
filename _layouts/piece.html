@@ -1,0 +1,61 @@
+---
+layout: default
+---
+{% assign status = page.status | downcase %}
+
+<nav class="breadcrumb">
+  <a href="{{ '/pieces/' | relative_url }}">← Back to gallery</a>
+</nav>
+
+<header class="piece-header">
+  <h1>{{ page.title }}</h1>
+
+  <div class="piece-sub">
+    {% if page.year %}<span>{{ page.year }}</span>{% endif %}
+    {% if page.materials %}<span class="dot">•</span><span>{{ page.materials }}</span>{% endif %}
+    {% if page.dimensions %}<span class="dot">•</span><span>{{ page.dimensions }}</span>{% endif %}
+
+    {% if status == "available" %}
+    <span class="badge-piece badge-available">Available</span>
+    {% else %}
+    <span class="badge-piece badge-unavailable">Not available</span>
+    {% endif %}
+  </div>
+
+</header>
+
+<section class="piece-gallery">
+  {% if page.images and page.images.size > 0 %}
+  {% for img in page.images %}
+  <figure class="piece-image">
+    <img
+            src="{{ img | relative_url }}"
+            alt="{{ page.title }} photo {{ forloop.index }}"
+            loading="lazy"
+    />
+  </figure>
+  {% endfor %}
+  {% else %}
+  <p>No images yet.</p>
+  {% endif %}
+</section>
+
+<section class="piece-body">
+  {{ content }}
+
+  {% assign show_price_site = site.show.price %}
+  {% assign show_price_piece = page.show.price %}
+  {% if page.price and show_price_site and show_price_piece != false %}
+  <p class="price">Price: {{ page.currency | default: "EUR" }} {{ page.price }}</p>
+  {% endif %}
+
+  {% assign show_cats_site = site.show.categories %}
+  {% assign show_cats_piece = page.show.categories %}
+  {% if page.categories and show_cats_site and show_cats_piece != false %}
+  <div class="chips">
+    {% for c in page.categories %}
+    <span class="chip">{{ c }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>

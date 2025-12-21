@@ -1,0 +1,22 @@
+title: Giorgio Martino
+description: Handmade Ceramics by Giorgio Martino
+baseurl: "/ceramics"
+url: ""
+
+markdown: kramdown
+
+collections:
+  pieces:
+    output: true
+    permalink: /pieces/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "pieces"
+    values:
+      layout: "piece"
+
+show:
+  categories: true
+  price: false
