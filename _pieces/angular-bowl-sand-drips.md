@@ -17,10 +17,10 @@ show:
   price: false
 
 images:
-  - /assets/pieces/angular-bowl-sand-drips/IMG_7071.JPG
-  - /assets/pieces/angular-bowl-sand-drips/IMG_7073.JPG
-  - /assets/pieces/angular-bowl-sand-drips/IMG_7067.JPG
-  - /assets/pieces/angular-bowl-sand-drips/IMG_7070.JPG
+  - /assets/pieces/angular-bowl-sand-drips/IMG_7071.webp
+  - /assets/pieces/angular-bowl-sand-drips/IMG_7073.webp
+  - /assets/pieces/angular-bowl-sand-drips/IMG_7067.webp
+  - /assets/pieces/angular-bowl-sand-drips/IMG_7070.webp
 
 ---
 Body: Red clay earthenware bisque fired at 980C
