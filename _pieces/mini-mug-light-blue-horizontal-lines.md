@@ -17,9 +17,9 @@ show:
   price: false
 
 images:
-  - /assets/pieces/mini-mug-light-blue-horizontal-lines/IMG_7059.JPG
-  - /assets/pieces/mini-mug-light-blue-horizontal-lines/IMG_7060.JPG
-  - /assets/pieces/mini-mug-light-blue-horizontal-lines/IMG_7062.JPG
+  - /assets/pieces/mini-mug-light-blue-horizontal-lines/IMG_7059.webp
+  - /assets/pieces/mini-mug-light-blue-horizontal-lines/IMG_7060.webp
+  - /assets/pieces/mini-mug-light-blue-horizontal-lines/IMG_7062.webp
 
 ---
 Body: Red clay earthenware bisque fired at 980C

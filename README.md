@@ -41,6 +41,20 @@ Each ceramic work is stored as a Markdown file in the `_pieces` directory. To ad
 3.  **Add content** below the front matter if you want a detailed write-up or more images.
 4.  **Upload Assets**: Place images related to the piece in a corresponding subfolder under `assets/pieces/`.
 
+## Convert images to WebP
+
+1. **Start a `rails console` like session:**
+
+    ```shell
+    bundle exec irb -r ./scripts/convert_folder_to_web_p
+    ```
+
+2. **Run the script:**
+
+    ```shell
+    ConvertFolderToWebP.batch_webp("assets/pieces/<folder-name>/*")
+    ```
+
 ## Gallery & Filtering
 
 The gallery page (`pieces.md`) uses `assets/js/gallery.js` to provide client-side filtering.

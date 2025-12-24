@@ -17,9 +17,9 @@ show:
   price: false
 
 images:
-  - /assets/pieces/mini-slate-bowl-with-lid/IMG_7080.JPG
-  - /assets/pieces/mini-slate-bowl-with-lid/IMG_7084.JPG
-  - /assets/pieces/mini-slate-bowl-with-lid/IMG_7086.JPG
+  - /assets/pieces/mini-slate-bowl-with-lid/IMG_7080.webp
+  - /assets/pieces/mini-slate-bowl-with-lid/IMG_7084.webp
+  - /assets/pieces/mini-slate-bowl-with-lid/IMG_7086.webp
 
 ---
 Body: Red clay earthenware bisque fired at 980C

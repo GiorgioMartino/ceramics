@@ -17,9 +17,9 @@ show:
   price: false
 
 images:
-  - /assets/pieces/angular-slate-vessel/IMG_7087.JPG
-  - /assets/pieces/angular-slate-vessel/IMG_7088.JPG
-  - /assets/pieces/angular-slate-vessel/IMG_7089.JPG
+  - /assets/pieces/angular-slate-vessel/IMG_7087.webp
+  - /assets/pieces/angular-slate-vessel/IMG_7088.webp
+  - /assets/pieces/angular-slate-vessel/IMG_7089.webp
 
 ---
 Body: Red clay earthenware bisque fired at 980C

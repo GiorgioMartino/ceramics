@@ -17,10 +17,10 @@ show:
   price: false
 
 images:
-  - /assets/pieces/blue-sand-horizontal-carving/IMG_7066.JPG
-  - /assets/pieces/blue-sand-horizontal-carving/IMG_7048.JPG
-  - /assets/pieces/blue-sand-horizontal-carving/IMG_7047.JPG
-  - /assets/pieces/blue-sand-horizontal-carving/IMG_7043.JPG
+  - /assets/pieces/blue-sand-horizontal-carving/IMG_7066.webp
+  - /assets/pieces/blue-sand-horizontal-carving/IMG_7048.webp
+  - /assets/pieces/blue-sand-horizontal-carving/IMG_7047.webp
+  - /assets/pieces/blue-sand-horizontal-carving/IMG_7043.webp
 
 ---
 Body: Red clay earthenware bisque fired at 980C

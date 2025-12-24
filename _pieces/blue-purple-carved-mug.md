@@ -17,10 +17,10 @@ show:
   price: false
 
 images:
-  - /assets/pieces/blue-purple-carved-mug/IMG_7054.JPG
-  - /assets/pieces/blue-purple-carved-mug/IMG_7056.JPG
-  - /assets/pieces/blue-purple-carved-mug/IMG_7055.JPG
-  - /assets/pieces/blue-purple-carved-mug/IMG_7051.JPG
+  - /assets/pieces/blue-purple-carved-mug/IMG_7054.webp
+  - /assets/pieces/blue-purple-carved-mug/IMG_7056.webp
+  - /assets/pieces/blue-purple-carved-mug/IMG_7055.webp
+  - /assets/pieces/blue-purple-carved-mug/IMG_7051.webp
 
 ---
 Body: Red clay earthenware bisque fired at 980C

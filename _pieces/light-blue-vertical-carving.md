@@ -17,9 +17,9 @@ show:
   price: false
 
 images:
-  - /assets/pieces/light-blue-vertical-carving/IMG_7063.JPG
-  - /assets/pieces/light-blue-vertical-carving/IMG_7033.JPG
-  - /assets/pieces/light-blue-vertical-carving/IMG_7032.JPG
+  - /assets/pieces/light-blue-vertical-carving/IMG_7063.webp
+  - /assets/pieces/light-blue-vertical-carving/IMG_7033.webp
+  - /assets/pieces/light-blue-vertical-carving/IMG_7032.webp
 
 ---
 Body: Red clay earthenware bisque fired at 980C

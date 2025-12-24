@@ -18,9 +18,9 @@ show:
   price: false
 
 images:
-  - /assets/pieces/first-piece/IMG_7039.JPG
-  - /assets/pieces/first-piece/IMG_7041.JPG
-  - /assets/pieces/first-piece/IMG_7042.JPG
+  - /assets/pieces/first-piece/IMG_7039.webp
+  - /assets/pieces/first-piece/IMG_7041.webp
+  - /assets/pieces/first-piece/IMG_7042.webp
 
 ---
 Body: Red clay earthenware bisque fired at 980C

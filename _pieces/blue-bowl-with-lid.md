@@ -17,9 +17,9 @@ show:
   price: false
 
 images:
-  - /assets/pieces/blue-bowl-with-lid/IMG_7076.JPG
-  - /assets/pieces/blue-bowl-with-lid/IMG_7077.JPG
-  - /assets/pieces/blue-bowl-with-lid/IMG_7079.JPG
+  - /assets/pieces/blue-bowl-with-lid/IMG_7076.webp
+  - /assets/pieces/blue-bowl-with-lid/IMG_7077.webp
+  - /assets/pieces/blue-bowl-with-lid/IMG_7079.webp
 
 ---
 Body: Red clay earthenware bisque fired at 980C
