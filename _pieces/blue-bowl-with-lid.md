@@ -25,5 +25,5 @@ images:
 Body: Red clay earthenware bisque fired at 980C
 
 Glaze: Fired at 1020C.<br>
-Outside - 2 coats of Mayco Denim Blue + 2 coats of Mayco Caribbean Blue
+Outside - 2 coats of Mayco Denim Blue + 2 coats of Mayco Caribbean Blue<br>
 Inside - 2 coats of Mayco Denim Blue + 2 coats of Mayco Slate

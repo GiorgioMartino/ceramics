@@ -26,5 +26,5 @@ images:
 Body: Red clay earthenware bisque fired at 980C
 
 Glaze: Fired at 1020C.<br>
-Outside - 3 coats of Mayco Sahara Sands + brushes of Mayco Denim Blue
+Outside - 3 coats of Mayco Sahara Sands + brushes of Mayco Denim Blue<br>
 Inside - 3 coats of Mayco Sahara Sands

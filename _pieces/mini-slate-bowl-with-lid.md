@@ -25,5 +25,5 @@ images:
 Body: Red clay earthenware bisque fired at 980C
 
 Glaze: Fired at 1020C.<br>
-Outside - 3 coats of Mayco Slate
+Outside - 3 coats of Mayco Slate<br>
 Inside - 2 coats of Mayco Sahara Sands + 2 coats of Mayco Slate
