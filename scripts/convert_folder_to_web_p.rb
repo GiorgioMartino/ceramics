@@ -3,6 +3,15 @@ class ConvertFolderToWebP
 
     require "vips"
 
+    # RUN with bundle exec ruby -r ./scripts/convert_folder_to_web_p.rb -e 'ConvertFolderToWebP.call'
+    def call
+      puts "Starting conversion..."
+
+      batch_webp("assets/pieces/c2_*/*")
+
+      puts "Done!"
+    end
+
     def batch_webp(folder_glob, max_width: 1600, quality: 85)
       Dir.glob(folder_glob).each do |path|
         next unless path =~ /\.(jpe?g|png)\z/i
