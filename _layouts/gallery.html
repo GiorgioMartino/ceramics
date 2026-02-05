@@ -1,6 +1,11 @@
 ---
 layout: default
 ---
+<section class="tabs" aria-label="Availability tabs">
+  <button class="tab-btn is-active" data-status="available" type="button">Available</button>
+  <button class="tab-btn" data-status="not available" type="button">Sold Out</button>
+</section>
+
 <header class="page-header">
   <h1>{{ page.title }}</h1>
   {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
@@ -8,24 +13,36 @@ layout: default
 
 {% assign pieces_sorted = site.pieces | sort: "year" | reverse %}
 
-{% assign all_cats = "" | split: "" %}
+{% assign available_cats = "" | split: "" %}
+{% assign not_available_cats = "" | split: "" %}
 {% for p in pieces_sorted %}
   {% if p.categories %}
+    {% assign status = p.status | downcase %}
     {% for c in p.categories %}
-      {% assign all_cats = all_cats | push: c %}
+      {% if status == "available" %}
+        {% assign available_cats = available_cats | push: c %}
+      {% else %}
+        {% assign not_available_cats = not_available_cats | push: c %}
+      {% endif %}
     {% endfor %}
   {% endif %}
 {% endfor %}
-{% assign all_cats = all_cats | uniq | sort %}
+{% assign available_cats = available_cats | uniq | sort %}
+{% assign not_available_cats = not_available_cats | uniq | sort %}
 
-{% if all_cats and all_cats.size > 0 %}
-  <section class="filters" aria-label="Category filters">
-    <button class="filter-btn is-active" data-filter="all" type="button">All</button>
-    {% for c in all_cats %}
-      <button class="filter-btn" data-filter="{{ c | downcase }}" type="button">{{ c }}</button>
-    {% endfor %}
-  </section>
-{% endif %}
+<section class="filters" data-status-filters="available" aria-label="Category filters">
+  <button class="filter-btn is-active" data-filter="all" type="button">All</button>
+  {% for c in available_cats %}
+    <button class="filter-btn" data-filter="{{ c | downcase }}" type="button">{{ c }}</button>
+  {% endfor %}
+</section>
+
+<section class="filters" data-status-filters="not available" style="display: none;" aria-label="Category filters">
+  <button class="filter-btn is-active" data-filter="all" type="button">All</button>
+  {% for c in not_available_cats %}
+    <button class="filter-btn" data-filter="{{ c | downcase }}" type="button">{{ c }}</button>
+  {% endfor %}
+</section>
 
 <section class="grid" id="piecesGrid">
   {% for piece in pieces_sorted %}
@@ -38,7 +55,7 @@ layout: default
       {% endfor %}
     {% endif %}
 
-    <article class="card" data-categories="{{ cat_list }}">
+    <article class="card" data-categories="{{ cat_list }}" data-status="{{ status }}">
       <a class="card-link" href="{{ piece.url | relative_url }}">
         <div class="thumb">
           {% if piece.images and piece.images.size > 0 %}
@@ -59,8 +76,6 @@ layout: default
         </div>
 
         <div class="meta">
-          <h2 class="title">{{ piece.title }}</h2>
-
           <div class="sub">
             {% if piece.year %}<span>{{ piece.year }}</span>{% endif %}
             {% if piece.materials %}<span class="dot">•</span><span>{{ piece.materials }}</span>{% endif %}

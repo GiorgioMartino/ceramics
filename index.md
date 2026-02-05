@@ -22,10 +22,6 @@ title: Home
                 <img src="{{ piece.images[0] | relative_url }}" alt="{{ piece.title }}" loading="lazy" />
               {% endif %}
             </div>
-            <div class="meta">
-              <h3 class="title">{{ piece.title }}</h3>
-              <div class="sub">{% if piece.year %}{{ piece.year }}{% endif %}</div>
-            </div>
           </a>
         </article>
       {% endfor %}
