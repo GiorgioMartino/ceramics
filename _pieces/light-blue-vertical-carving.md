@@ -12,9 +12,6 @@ featured: true
 
 price: 15
 
-show:
-  categories: true
-  price: false
 
 images:
   - /assets/pieces/light-blue-vertical-carving/IMG_7063.webp

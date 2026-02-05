@@ -79,6 +79,9 @@ layout: default
           <div class="sub">
             {% if piece.year %}<span>{{ piece.year }}</span>{% endif %}
             {% if piece.materials %}<span class="dot">•</span><span>{{ piece.materials }}</span>{% endif %}
+            {% assign show_price_site = site.show.price %}
+            {% assign show_price_piece = piece.show.price %}
+            {% if show_price_site and show_price_piece != false and piece.price %}<span class="dot">•</span><span>{{ piece.price }}€</span>{% endif %}
           </div>
 
           {% assign show_cats_site = site.show.categories %}

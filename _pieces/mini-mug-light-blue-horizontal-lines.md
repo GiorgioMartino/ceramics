@@ -12,9 +12,6 @@ featured: true
 
 price: 15
 
-show:
-  categories: true
-  price: false
 
 images:
   - /assets/pieces/mini-mug-light-blue-horizontal-lines/IMG_7059.webp

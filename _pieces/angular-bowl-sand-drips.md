@@ -12,9 +12,6 @@ featured: true
 
 price: 15
 
-show:
-  categories: true
-  price: false
 
 images:
   - /assets/pieces/angular-bowl-sand-drips/IMG_7071.webp

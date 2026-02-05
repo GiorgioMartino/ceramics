@@ -14,6 +14,12 @@ layout: default
     {% if page.materials %}<span class="dot">•</span><span>{{ page.materials }}</span>{% endif %}
     {% if page.dimensions %}<span class="dot">•</span><span>{{ page.dimensions }}</span>{% endif %}
 
+    {% assign show_price_site = site.show.price %}
+    {% assign show_price_piece = page.show.price %}
+    {% if page.price and show_price_site and show_price_piece != false %}
+    <span class="dot">•</span><span>{{ page.price }}€</span>
+    {% endif %}
+
     {% if status == "available" %}
     <span class="badge-piece badge-available">Available</span>
     {% else %}
@@ -41,12 +47,6 @@ layout: default
 
 <section class="piece-body">
   {{ content }}
-
-  {% assign show_price_site = site.show.price %}
-  {% assign show_price_piece = page.show.price %}
-  {% if page.price and show_price_site and show_price_piece != false %}
-  <p class="price">Price: {{ page.currency | default: "EUR" }} {{ page.price }}</p>
-  {% endif %}
 
   {% assign show_cats_site = site.show.categories %}
   {% assign show_cats_piece = page.show.categories %}

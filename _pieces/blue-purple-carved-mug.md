@@ -12,9 +12,6 @@ featured: false
 
 price: 15
 
-show:
-  categories: true
-  price: false
 
 images:
   - /assets/pieces/blue-purple-carved-mug/IMG_7054.webp

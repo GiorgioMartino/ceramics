@@ -12,10 +12,6 @@ featured: false
 
 price: 20
 
-show:
-  categories: true
-  price: false
-
 images:
   - /assets/pieces/blue-bowl-with-lid/IMG_7076.webp
   - /assets/pieces/blue-bowl-with-lid/IMG_7077.webp

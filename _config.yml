@@ -19,4 +19,4 @@ defaults:
 
 show:
   categories: true
-  price: false
+  price: true

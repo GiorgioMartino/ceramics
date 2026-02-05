@@ -12,9 +12,6 @@ featured: true
 
 price: 15
 
-show:
-  categories: true
-  price: false
 
 images:
   - /assets/pieces/blue-sand-horizontal-carving/IMG_7066.webp

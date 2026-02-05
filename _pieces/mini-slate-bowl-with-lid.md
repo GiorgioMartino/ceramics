@@ -12,9 +12,6 @@ featured: false
 
 price: 15
 
-show:
-  categories: true
-  price: false
 
 images:
   - /assets/pieces/mini-slate-bowl-with-lid/IMG_7080.webp
