@@ -1,7 +1,9 @@
 ---
 title: "Mini slate bowl with lid"
 year: 2025
-dimensions: 9 W x 8 H
+dimensions:
+  width: 9
+  height: 8
 materials: "Earthenware"
 status: "not available"
 

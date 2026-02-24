@@ -1,7 +1,9 @@
 ---
 title: "Light blue mini cup with horizontal lines"
 year: 2025
-dimensions: 7 W x 4.5 H
+dimensions:
+  width: 7
+  height: 4.5
 materials: "Earthenware"
 status: "not available"
 

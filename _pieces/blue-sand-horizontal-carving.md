@@ -1,7 +1,9 @@
 ---
 title: "Blue/sand cup with horizontal carvings"
 year: 2025
-dimensions: 6 W x 6.5 H
+dimensions:
+  width: 6
+  height: 6.5
 materials: "Earthenware"
 status: "not available"
 

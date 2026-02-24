@@ -1,7 +1,9 @@
 ---
 title: "Deep blue bowl with lid"
 year: 2025
-dimensions: 11.5 W x 8 H
+dimensions:
+  width: 11.5
+  height: 8
 materials: "Earthenware"
 status: "not available"
 

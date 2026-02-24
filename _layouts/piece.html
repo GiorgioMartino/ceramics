@@ -20,7 +20,33 @@ layout: default
   </div>
 
   <div class="piece-sub">
-    {% if page.dimensions %}<span>{{ page.dimensions }}</span>{% endif %}
+    {% if page.dimensions %}
+    {% assign d = page.dimensions %}
+    {% assign unit = d.unit | default: "cm" %}
+
+    {% if d.width or d.height or d.diameter %}
+    <div class="piece-meta" aria-label="Dimensions">
+      {% if d.width %}
+      <span class="meta-chip">
+        <span class="dim-icon dim-icon--width" aria-hidden="true" title="Width"></span>
+        <span class="sr-only">Width</span>
+        {{ d.width }} {{ unit }}
+      </span>
+      {% endif %}
+
+      {% if d.height %}
+      <span class="meta-chip">
+        <span class="dim-icon dim-icon--height" aria-hidden="true" title="Height"></span>
+        <span class="sr-only">Height</span>
+        {{ d.height }} {{ unit }}
+      </span>
+      {% endif %}
+    </div>
+    {% else %}
+    <!-- Backward-compatible: if dimensions is still a plain string -->
+    <span>{{ page.dimensions }}</span>
+    {% endif %}
+    {% endif %}
   </div>
 
 </header>

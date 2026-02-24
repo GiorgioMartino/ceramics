@@ -1,7 +1,9 @@
 ---
 title: "First piece - ornamental cup"
 year: 2025
-dimensions: 9 W x 6.5 H
+dimensions:
+  width: 9
+  height: 6.5
 materials: "Earthenware"
 status: "not available"
 

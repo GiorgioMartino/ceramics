@@ -1,7 +1,9 @@
 ---
 title: "Angular slate vase"
 year: 2025
-dimensions: 9 W x 9.5 H
+dimensions:
+  width: 9
+  height: 9.5
 materials: "Earthenware"
 status: "available"
 

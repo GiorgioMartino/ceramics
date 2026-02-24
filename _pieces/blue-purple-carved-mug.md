@@ -1,7 +1,9 @@
 ---
 title: "Blue/white cup with carvings"
 year: 2025
-dimensions: 8 W x 6 H
+dimensions:
+  width: 8
+  height: 6
 materials: "Earthenware"
 status: "not available"
 

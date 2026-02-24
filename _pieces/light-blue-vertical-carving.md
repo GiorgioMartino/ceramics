@@ -1,7 +1,9 @@
 ---
 title: "Beachside cup with vertical hand carvings"
 year: 2025
-dimensions: 6.5 W x 7 H
+dimensions:
+  width: 6.5
+  height: 7
 materials: "Earthenware"
 status: "not available"
 
