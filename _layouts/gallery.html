@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-<section class="tabs" aria-label="Availability tabs">
-  <button class="tab-btn is-active" data-status="available" type="button">Available</button>
-  <button class="tab-btn" data-status="not available" type="button">Sold Out</button>
-</section>
+<!--<section class="tabs" aria-label="Availability tabs">-->
+<!--  <button class="tab-btn is-active" data-status="available" type="button">Available</button>-->
+<!--  <button class="tab-btn" data-status="not available" type="button">Sold Out</button>-->
+<!--</section>-->
 
-<header class="page-header">
+<header>
   <h1>{{ page.title }}</h1>
-  {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
+<!--  {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}-->
 </header>
 
 {% assign pieces_sorted = site.pieces | sort: "year" | reverse %}
@@ -68,32 +68,49 @@ layout: default
             <div class="thumb-placeholder">No image yet</div>
           {% endif %}
 
-          {% if status == "available" %}
-            <span class="badge badge-available">Available</span>
-          {% else %}
-            <span class="badge badge-unavailable">Not available</span>
-          {% endif %}
-        </div>
-
-        <div class="meta">
-          <div class="sub">
-            {% if piece.year %}<span>{{ piece.year }}</span>{% endif %}
-            {% if piece.materials %}<span class="dot">•</span><span>{{ piece.materials }}</span>{% endif %}
-            {% assign show_price_site = site.show.price %}
-            {% assign show_price_piece = piece.show.price %}
-            {% if show_price_site and show_price_piece != false and piece.price %}<span class="dot">•</span><span>{{ piece.price }}€</span>{% endif %}
+          {% if piece.categories %}
+          <div class="chips chips--overlay" aria-label="Categories">
+            {% for c in piece.categories %}
+            <span class="chip">{{ c }}</span>
+            {% endfor %}
           </div>
-
-          {% assign show_cats_site = site.show.categories %}
-          {% assign show_cats_piece = piece.show.categories %}
-          {% if show_cats_site and show_cats_piece != false and piece.categories %}
-            <div class="chips">
-              {% for c in piece.categories %}
-                <span class="chip">{{ c }}</span>
-              {% endfor %}
-            </div>
           {% endif %}
+
+          {% assign show_price_site = site.show.price %}
+          {% assign show_price_piece = piece.show.price %}
+          {% if piece.price and show_price_site and show_price_piece != false %}
+          <div class="price price--overlay" aria-label="Price">
+            {{ piece.price }}
+          </div>
+          {% endif %}
+
+
+          <!--          {% if status == "available" %}-->
+<!--            <span class="badge badge-available">Available</span>-->
+<!--          {% else %}-->
+<!--            <span class="badge badge-unavailable">Not available</span>-->
+<!--          {% endif %}-->
         </div>
+
+<!--        <div class="meta">-->
+<!--          <div class="sub">-->
+<!--            {% if piece.year %}<span>{{ piece.year }}</span>{% endif %}-->
+<!--            {% if piece.materials %}<span class="dot">•</span><span>{{ piece.materials }}</span>{% endif %}-->
+<!--            {% assign show_price_site = site.show.price %}-->
+<!--            {% assign show_price_piece = piece.show.price %}-->
+<!--            {% if show_price_site and show_price_piece != false and piece.price %}<span class="dot">•</span><span>{{ piece.price }}€</span>{% endif %}-->
+<!--          </div>-->
+
+<!--          {% assign show_cats_site = site.show.categories %}-->
+<!--          {% assign show_cats_piece = piece.show.categories %}-->
+<!--          {% if show_cats_site and show_cats_piece != false and piece.categories %}-->
+<!--            <div class="chips">-->
+<!--              {% for c in piece.categories %}-->
+<!--                <span class="chip">{{ c }}</span>-->
+<!--              {% endfor %}-->
+<!--            </div>-->
+<!--          {% endif %}-->
+<!--        </div>-->
       </a>
     </article>
   {% endfor %}
