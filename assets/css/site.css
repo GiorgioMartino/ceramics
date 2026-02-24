@@ -41,33 +41,6 @@ body {
 .nav a { color: var(--muted); text-decoration: none; margin-left: 14px; }
 .nav a:hover { color: var(--text); }
 
-.subtitle { color: var(--muted); max-width: 60ch; }
-
-.hero { padding: 28px 0 10px; }
-.cta {
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(182, 106, 74, 0.5);
-}
-.cta:hover { border-bottom-color: var(--accent); }
-
-.tabs { display: flex; gap: 0; margin: 0 0 20px; border-bottom: 2px solid var(--border); }
-.tab-btn {
-    flex: 1;
-    border: none;
-    background: transparent;
-    color: var(--muted);
-    padding: 14px 20px;
-    cursor: pointer;
-    font-weight: 500;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -2px;
-}
-.tab-btn.is-active {
-    color: var(--text);
-    border-bottom-color: var(--accent);
-}
-
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 18px; }
 .filter-btn {
     border: 1px solid var(--border);
@@ -91,25 +64,6 @@ body {
 @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 580px) { .grid { grid-template-columns: 1fr; } }
 
-/* Homepage-only: more minimal portfolio grid */
-.home-portfolio-grid {
-    gap: 0;
-}
-
-.home-portfolio-grid .card {
-    border-radius: 0;
-    border: 0;
-    background: transparent;
-}
-
-.home-portfolio-grid .thumb {
-    border-radius: 0;
-}
-
-.home-portfolio-grid .thumb img {
-    border-radius: 0;
-}
-
 .card {
     border: 0;
     background: var(--card);
@@ -120,19 +74,6 @@ body {
 .thumb { position: relative; aspect-ratio: 4/3; background: rgba(43, 37, 32, 0.06); }
 .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .thumb-placeholder { padding: 16px; color: var(--muted); }
-
-.meta { padding: 12px 12px 14px; }
-.title { margin: 0; font-size: 16px; }
-.sub {
-    margin-top: 6px;
-    color: var(--muted);
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-.dot { opacity: 0.6; }
 
 .badge {
     position: absolute;
@@ -181,7 +122,7 @@ body {
     backdrop-filter: blur(6px);
 }
 
-/* OPTION C — “Corner ribbon”: more graphic, very visible */
+/* “Corner ribbon”: price overlay on thumbnails */
 .price--overlay {
     position: absolute;
     right: 10px;
@@ -199,10 +140,6 @@ body {
     padding: 6px 12px;
     border-radius: 2px;
 }
-
-.breadcrumb { margin: 10px 0 14px; }
-.breadcrumb a { color: var(--muted); text-decoration: none; }
-.breadcrumb a:hover { color: var(--text); }
 
 .piece-header { padding: 10px 0 6px; }
 
@@ -267,7 +204,7 @@ body {
 .piece-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 2px;
     margin: 12px 0 14px;
 }
 
@@ -278,18 +215,16 @@ body {
 /* Make the grid feel “designed”: uniform tiles */
 .piece-image {
     margin: 0;
-    border-radius: 16px;
+    border-radius: 0;
     overflow: hidden;
-    border: 1px solid var(--border);
     background: rgba(255, 255, 255, 0.35);
-
-    aspect-ratio: 4 / 3;          /* key change */
+    aspect-ratio: 4 / 3;
 }
 
 .piece-image img {
     width: 100%;
-    height: 100%;                 /* key change */
-    object-fit: cover;            /* key change */
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 

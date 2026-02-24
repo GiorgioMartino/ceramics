@@ -20,8 +20,6 @@ layout: default
   </div>
 
   <div class="piece-sub">
-<!--    {% if page.year %}<span>{{ page.year }}</span>{% endif %}-->
-<!--    {% if page.materials %}<span class="dot">•</span><span>{{ page.materials }}</span>{% endif %}-->
     {% if page.dimensions %}<span>{{ page.dimensions }}</span>{% endif %}
   </div>
 
@@ -45,14 +43,4 @@ layout: default
 
 <section class="piece-body">
   {{ content }}
-
-  <!--  {% assign show_cats_site = site.show.categories %}-->
-  <!--  {% assign show_cats_piece = page.show.categories %}-->
-  <!--  {% if page.categories and show_cats_site and show_cats_piece != false %}-->
-  <!--  <div class="chips">-->
-  <!--    {% for c in page.categories %}-->
-  <!--    <span class="chip">{{ c }}</span>-->
-  <!--    {% endfor %}-->
-  <!--  </div>-->
-  <!--  {% endif %}-->
 </section>
