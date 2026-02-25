@@ -12,7 +12,7 @@ categories:
 
 featured: false
 
-price: 15
+price: 10
 
 
 images:

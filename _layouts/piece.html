@@ -14,7 +14,7 @@ layout: default
 
     {% assign show_price_site = site.show.price %}
     {% assign show_price_piece = page.show.price %}
-    {% if page.price and show_price_site and show_price_piece != false %}
+    {% if page.price and show_price_site and status == "available" and show_price_piece != false %}
     <div class="price price--topbar" aria-label="Price">{{ page.price }}</div>
     {% endif %}
   </div>
@@ -42,9 +42,6 @@ layout: default
       </span>
       {% endif %}
     </div>
-    {% else %}
-    <!-- Backward-compatible: if dimensions is still a plain string -->
-    <span>{{ page.dimensions }}</span>
     {% endif %}
     {% endif %}
   </div>
