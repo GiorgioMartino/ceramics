@@ -6,7 +6,7 @@ class ConvertFolderToWebP
     # BEFORE running - edit `folder_glob`
     # RUN with bundle exec ruby -r ./scripts/convert_folder_to_web_p.rb -e 'ConvertFolderToWebP.call'
     def call
-      folder_glob = "assets/pieces/c3_*/*"
+      folder_glob = "assets/pieces/c4_*/*"
       puts "Starting conversion..."
 
       batch_webp(folder_glob)

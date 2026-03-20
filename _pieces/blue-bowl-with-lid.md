@@ -8,7 +8,7 @@ materials: "Earthenware"
 status: "not available"
 
 categories:
-  - lidded vessel
+  - jar
 
 featured: false
 
